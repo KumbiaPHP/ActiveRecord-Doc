@@ -1,6 +1,6 @@
-**1. Introducción**
+# Introducción
 
-1.1 **¿Qué es ActiveRecord en KumbiaPHP?**  
+## ¿Qué es ActiveRecord en KumbiaPHP?  
 ¡Bienvenidos al emocionante mundo de ActiveRecord para KumbiaPHP! 🌟 Imagina poder manejar tus bases de datos con la
 facilidad de jugar con bloques de construcción. ActiveRecord es una implementación del patrón de diseño Active Record
 que nació en el ecosistema de KumbiaPHP, pero que ahora puede correr libremente en cualquier aplicación PHP o framework.
@@ -8,18 +8,18 @@ Con ActiveRecord, puedes mapear objetos PHP directamente a tablas de bases de da
 (Crear, Leer, Actualizar, Eliminar) sean tan fáciles como un paseo por el parque. Olvídate de escribir consultas SQL
 tediosas y céntrate en lo que realmente importa: ¡tu lógica de negocio!
 
-1.2 **Ventajas y funcionalidades**
+## Ventajas y funcionalidades
 - **Abstracción de datos**: Olvídate de las complicadas consultas SQL. El modelo traduce todas tus operaciones a SQL
   automáticamente.
 - **Simplicidad**: Con métodos predefinidos, las operaciones CRUD están al alcance de tu mano, sin complicaciones.
 - **Validaciones y callbacks**: Activa validaciones y acciones en momentos específicos del ciclo de vida de tus modelos
   con solo un par de líneas de código.
 
-1.3 **Requisitos previos**
+## Requisitos previos
 - **PHP**: Asegúrate de tener PHP 7.4 o superior instalado.
 - **Base de datos**: Compatible con MySQL, PostgreSQL, SQLite y otros sistemas de bases de datos soportados por PDO.
 
-1.4 **Instalación y configuración inicial**
+## Instalación y configuración inicial
 - **Instalación**: Tienes dos caminos para instalar ActiveRecord y ambos son sencillos.
   - **GitHub**: Clona el repositorio directamente desde [ActiveRecord en GitHub](https://github.com/KumbiaPHP/ActiveRecord/).
   - **Composer**: Añade el paquete a tu archivo `composer.json` o utiliza el comando `composer require kumbia/activerecord`.
