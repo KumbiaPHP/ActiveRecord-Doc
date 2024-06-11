@@ -5,3 +5,8 @@
 - [Ventajas y funcionalidades](introduction.md#ventajas-y-funcionalidades)
 - [Requisitos previos](introduction.md#requisitos-previos)  
 - [Instalación y configuración inicial](introduction.md#instalaci%C3%B3n-y-configuraci%C3%B3n-inicial)  
+ 
+## Uso Básico
+- [Conceptos fundamentales de ActiveRecord](basic-usage.md#conceptos-fundamentales-de-literecord)
+- [Definición de modelos](basic-usage.md#definición-de-modelos-con-literecord)
+- [Operaciones CRUD básicas](basic-usage.md#operaciones-crud-básicas-con-literecord)
