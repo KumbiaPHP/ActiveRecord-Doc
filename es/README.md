@@ -10,3 +10,9 @@
 - [Conceptos fundamentales de ActiveRecord](basic-usage.md#conceptos-fundamentales-de-literecord)
 - [Definición de modelos](basic-usage.md#definición-de-modelos-con-literecord)
 - [Operaciones CRUD básicas](basic-usage.md#operaciones-crud-básicas-con-literecord)
+
+## Configuración Avanzada  
+- [Validaciones y callbacks](advanced-configuration.md#validaciones-y-callbacks)  
+- [Filtros de búsqueda personalizados](advanced-configuration.md#filtros-de-búsqueda-personalizados)  
+- [Gestión de transacciones](advanced-configuration.md#gestión-de-transacciones)
+- 
