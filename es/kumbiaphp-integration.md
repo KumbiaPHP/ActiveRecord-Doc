@@ -147,9 +147,9 @@ class Producto extends LiteRecord
 {
     protected static $table = 'productos';
 
-    protected function _beforeSave()
+    protected function _beforeCreate()
     {
-        // Garantiza que el campo 'precio' en esta tabla sea siempre mayor que cero cuando se guarda una instancia de
+        // Garantiza que el campo 'precio' en esta tabla sea siempre mayor que cero cuando se crea una instancia de
         // esta clase (un registro) en la tabla 'productos'.
         return $this->precio > 0;
     }
