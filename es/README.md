@@ -15,4 +15,8 @@
 - [Validaciones y callbacks](advanced-configuration.md#validaciones-y-callbacks)  
 - [Filtros de búsqueda personalizados](advanced-configuration.md#filtros-de-búsqueda-personalizados)  
 - [Gestión de transacciones](advanced-configuration.md#gestión-de-transacciones)
-- 
+
+## Integración con KumbiaPHP
+- [Instalación con Composer](kumbiaphp-integration.md#instalación-con-composer)
+- [Integración con el sistema de vistas](kumbiaphp-integration.md#integración-con-el-sistema-de-vistas)
+- [Control de acceso basado en roles (RBAC)](kumbiaphp-integration.md#control-de-acceso-basado-en-roles-rbac)
