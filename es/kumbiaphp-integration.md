@@ -147,12 +147,11 @@ class Producto extends LiteRecord
 {
     protected static $table = 'productos';
 
-    protected function _beforeSave()
+    protected function _beforeCreate()
     {
-        if ($this->precio <= 0) {
-            return false;
-        }
-        return true;
+        // Garantiza que el campo 'precio' en esta tabla sea siempre mayor que cero cuando se crea una instancia de
+        // esta clase (un registro) en la tabla 'productos'.
+        return $this->precio > 0;
     }
 }
 ```
@@ -190,9 +189,9 @@ class ProductoController extends AppController
             if ($producto->create()) {
                 Flash::valid('Producto creado con éxito');
                 return Redirect::to();
-            } else {
-                Flash::error('Error al crear el producto');
             }
+            
+            Flash::error('Error al crear el producto');
         }
     }
 
@@ -208,9 +207,9 @@ class ProductoController extends AppController
             if ($producto->update(Input::post('producto'))) {
                 Flash::valid('Producto actualizado con éxito');
                 return Redirect::to();
-            } else {
-                Flash::error('Error al actualizar el producto');
             }
+            
+            Flash::error('Error al actualizar el producto');
         }
 
         $this->producto = $producto;
@@ -243,6 +242,8 @@ Vamos a crear las vistas para manejar las operaciones CRUD.
 
 echo Html::link('producto/crear', 'Crear nuevo producto', 'class="btn btn-primary"');
 ?>
+
+<?php View::content(); ?>
 
 <table>
     <thead>
@@ -299,6 +300,7 @@ echo Html::link('producto/crear', 'Crear nuevo producto', 'class="btn btn-primar
 ?>
 
 <h1>Crear Producto</h1>
+<?php View::content(); ?>
 <?= Form::open() ?>
 <div>
     <?= Form::label('Nombre', 'producto_nombre') ?>
@@ -325,6 +327,7 @@ echo Html::link('producto/crear', 'Crear nuevo producto', 'class="btn btn-primar
 ?>
 
 <h1>Editar Producto</h1>
+<?php View::content(); ?>
 <?= Form::open() ?>
 <div>
     <?= Form::label('Nombre', 'producto_nombre') ?>
