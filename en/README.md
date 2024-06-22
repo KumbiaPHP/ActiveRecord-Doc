@@ -22,7 +22,7 @@
 - [Role-Based Access Control (RBAC)](kumbiaphp-integration.md#role-based-access-control-rbac)
 
 ## Introducción a los callbacks
-- [Conceptos y Ejemplos Prácticos](callbacks.md#conceptos-y-ejemplos-prácticos)
+- [Conceptos y Ejemplos Prácticos](callbacks.md#concepts-and-practical-examples)
   - [_beforeSave](callbacks.md#_beforesave)
   - [_afterSave](callbacks.md#_aftersave)
   - [_beforeCreate](callbacks.md#_beforecreate)
