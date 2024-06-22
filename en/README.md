@@ -20,3 +20,12 @@
 - [Installation with Composer](kumbiaphp-integration.md#installation-with-composer)
 - [Integration with the View System](kumbiaphp-integration.md#integration-with-the-view-system)
 - [Role-Based Access Control (RBAC)](kumbiaphp-integration.md#role-based-access-control-rbac)
+
+## Introducción a los callbacks
+- [Conceptos y Ejemplos Prácticos](callbacks.md#conceptos-y-ejemplos-prácticos)
+  - [_beforeSave](callbacks.md#_beforesave)
+  - [_afterSave](callbacks.md#_aftersave)
+  - [_beforeCreate](callbacks.md#_beforecreate)
+  - [_afterCreate](callbacks.md#_aftercreate)
+  - [_beforeUpdate](callbacks.md#_beforeupdate)
+  - [_afterUpdate](callbacks.md#_afterupdate)
