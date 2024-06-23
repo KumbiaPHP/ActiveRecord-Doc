@@ -29,3 +29,10 @@
   - [_afterCreate](callbacks.md#_aftercreate)
   - [_beforeUpdate](callbacks.md#_beforeupdate)
   - [_afterUpdate](callbacks.md#_afterupdate)
+
+## Funciones de Consulta con LiteRecord
+- [Función `get`](retrieving-data.md#función-get)
+- [Función `all`](retrieving-data.md#función-all)
+- [Función `first`](retrieving-data.md#función-first)
+- [Función `filter`](retrieving-data.md#función-filter)
+- [Uso de Parámetros Nombrados](retrieving-data.md#uso-de-parámetros-nombrados)
