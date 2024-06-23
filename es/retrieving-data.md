@@ -152,7 +152,7 @@ foreach ($productos as $producto) {
 
 Aquí, utilizamos `ORDER BY` para ordenar los productos por precio de manera descendente.
 
-### Ejemplo 3: Obtener el primer resultado con `filter`
+### Ejemplo 5: Obtener el primer resultado con `filter`
 
 A veces solo necesitas el primer resultado de una consulta. Puedes utilizar `filter` y acceder al primer elemento del
 array resultante.
@@ -180,7 +180,7 @@ if ($producto) {
 }
 ```
 
-### Ejemplo 4: Obtener un listado con `filter`
+### Ejemplo 6: Obtener un listado con `filter`
 
 Cuando necesitas un listado completo que cumple con ciertas condiciones.
 
