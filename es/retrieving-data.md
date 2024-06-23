@@ -61,7 +61,8 @@ En este ejemplo, obtenemos un producto con ID 3 utilizando la instancia del mode
 
 ## Función `filter`
 
-La función `filter` permite aplicar filtros personalizados a las consultas SQL y devuelve un array de registros.
+La función `filter` permite construir consultas complejas sin tener que escribir el SELECT completo. Solo necesitas
+proporcionar las condiciones y valores.
 
 ### Ejemplo 1: Filtrar productos por rango de precios
 
@@ -105,7 +106,105 @@ foreach ($usuarios as $usuario) {
 
 Aquí, filtramos los usuarios que viven en Madrid y mostramos su nombre y email.
 
+### Ejemplo 3: Consulta con JOIN
 
+Supongamos que tenemos dos tablas, `productos` y `categorias`, y queremos obtener todos los productos junto con el nombre de su categoría.
+
+```php
+class Producto extends LiteRecord
+{
+    protected static $table = 'productos';
+
+    public static function obtenerProductosConCategoria()
+    {        
+        return self::filter('JOIN categorias ON productos.categoria_id = categorias.id');
+    }
+}
+
+$productos = Producto::obtenerProductosConCategoria();
+foreach ($productos as $producto) {
+    echo "Producto: $producto->nombre, Categoría: $producto->categoria_nombre\n";
+}
+```
+
+En este ejemplo, utilizamos un `JOIN` para combinar los datos de las tablas `productos` y `categorias`.
+
+### Ejemplo 4: Consulta con ORDER BY
+
+Supongamos que queremos obtener todos los productos ordenados por precio de manera descendente.
+
+```php
+class Producto extends LiteRecord
+{
+    protected static $table = 'productos';
+
+    public static function obtenerProductosOrdenadosPorPrecio()
+    {
+        return self::filter('ORDER BY precio DESC');
+    }
+}
+
+$productos = Producto::obtenerProductosOrdenadosPorPrecio();
+foreach ($productos as $producto) {
+    echo "Producto: $producto->nombre, Precio: $producto->precio\n";
+}
+```
+
+Aquí, utilizamos `ORDER BY` para ordenar los productos por precio de manera descendente.
+
+### Ejemplo 3: Obtener el primer resultado con `filter`
+
+A veces solo necesitas el primer resultado de una consulta. Puedes utilizar `filter` y acceder al primer elemento del
+array resultante.
+
+```php
+class Producto extends LiteRecord
+{
+    protected static $table = 'productos';
+
+    public static function obtenerPrimerProductoEnCategoria($categoriaId)
+    {
+        $resultados = self::filter(
+            'WHERE categoria_id = ? ORDER BY precio ASC LIMIT 1',
+            [$categoriaId]
+        );
+        return $resultados[0] ?? null;
+    }
+}
+
+$producto = Producto::obtenerPrimerProductoEnCategoria(1);
+if ($producto) {
+    echo "Producto: $producto->nombre, Precio: $producto->precio\n";
+} else {
+    echo "No se encontró ningún producto en esta categoría.";
+}
+```
+
+### Ejemplo 4: Obtener un listado con `filter`
+
+Cuando necesitas un listado completo que cumple con ciertas condiciones.
+
+```php
+class Usuario extends LiteRecord
+{
+    protected static $table = 'usuarios';
+
+    public static function obtenerUsuariosPorCiudadYEstado($ciudad, $estado)
+    {
+        return self::filter(
+            'WHERE ciudad = :ciudad AND estado = :estado',
+            ['ciudad' => $ciudad, 'estado' => $estado]
+        );
+    }
+}
+
+$usuarios = Usuario::obtenerUsuariosPorCiudadYEstado('Madrid', 'activo');
+foreach ($usuarios as $usuario) {
+    echo "Usuario: $usuario->nombre, Email: $usuario->email\n";
+}
+```
+
+En este ejemplo, utilizamos `filter` para obtener una lista de usuarios que viven en Madrid y están activos.
 
 ## Función `all`
 
@@ -205,7 +304,9 @@ Aquí, obtenemos el primer usuario registrado ordenado por fecha de registro.
 
 ## Uso de Parámetros Nombrados
 
-LiteRecord también permite el uso de parámetros nombrados en las consultas, lo que facilita la lectura y el mantenimiento del código. Los parámetros nombrados hacen que las consultas sean más claras y ayudan a evitar errores comunes al ordenar los valores de los parámetros.
+LiteRecord también permite el uso de parámetros nombrados en las consultas, lo que facilita la lectura y el
+mantenimiento del código. Los parámetros nombrados hacen que las consultas sean más claras y ayudan a evitar errores
+comunes al ordenar los valores de los parámetros.
 
 ### Ejemplo de `all` con parámetros nombrados
 
