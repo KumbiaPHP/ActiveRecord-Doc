@@ -29,3 +29,10 @@
   - [_afterCreate](callbacks.md#_aftercreate)
   - [_beforeUpdate](callbacks.md#_beforeupdate)
   - [_afterUpdate](callbacks.md#_afterupdate)
+
+## Query Functions
+- [`get` Function](retrieving-data.md#get-function)
+- [`filter` Function](retrieving-data.md#filter-function)
+- [`all` Function](retrieving-data.md#all-function)
+- [`first` Function](retrieving-data.md#first-function)
+- [Using Named Parameters](retrieving-data.md#using-named-parameters)
