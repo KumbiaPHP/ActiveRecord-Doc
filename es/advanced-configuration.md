@@ -4,6 +4,53 @@
 `LiteRecord` para implementaciones avanzadas como validaciones, callbacks y filtros personalizados. ¡Prepárate para
 hacer magia con tu código!
 
+## Cambio de Conexión de Base de Datos
+
+En `LiteRecord`, puedes cambiar fácilmente la conexión de la base de datos que utiliza tu modelo modificando el
+parámetro `protected static $database = 'default';`. Esto te permite gestionar múltiples conexiones de bases de datos en
+tu aplicación, proporcionando flexibilidad para diversos entornos y necesidades.
+
+### Ejemplo de Cambio de Conexión
+
+Supongamos que tienes varias bases de datos configuradas en tu aplicación y deseas que un modelo específico use una
+conexión diferente. Aquí te mostramos cómo hacerlo:
+
+```php
+class Producto extends LiteRecord
+{
+    protected static $table = 'productos';
+    protected static $database = 'otra_conexion';
+
+    // Resto de la configuración del modelo
+}
+```
+
+En este ejemplo, el modelo `Producto` utilizará la conexión de base de datos configurada bajo el nombre `otra_conexion`
+en tu configuración de conexiones.
+
+### Configuración de Conexiones en KumbiaPHP
+
+Asegúrate de tener las conexiones de base de datos adecuadamente configuradas en tu archivo de configuración de
+KumbiaPHP (`config/database.php`):
+
+```php
+return [
+    'default' => [
+        'dsn'      => 'mysql:host=localhost;dbname=mi_base_de_datos',
+        'username' => 'mi_usuario',
+        'password' => 'mi_contraseña',
+    ],
+    'otra_conexion' => [
+        'dsn'      => 'mysql:host=localhost;dbname=otra_base_de_datos',
+        'username' => 'otro_usuario',
+        'password' => 'otra_contraseña',
+    ],
+];
+```
+
+Con esta configuración, el modelo `Producto` se conectará a la base de datos `otra_conexion` cuando realice
+operaciones.
+
 ## Validaciones y callbacks
 
 `LiteRecord` te permite definir callbacks para ejecutar acciones en momentos específicos del ciclo de vida de un modelo.
