@@ -48,7 +48,7 @@ return [
 ];
 ```
 
-Con esta configuración, el modelo `Producto` se conectará a la base de datos `otra_base_de_datos` cuando realice
+Con esta configuración, el modelo `Producto` se conectará a la base de datos `otra_conexion` cuando realice
 operaciones.
 
 ## Validaciones y callbacks
