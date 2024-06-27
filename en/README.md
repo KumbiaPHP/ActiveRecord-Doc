@@ -12,6 +12,7 @@
 - [Basic CRUD Operations](basic-usage.md#basic-crud-operations-with-literecord)
 
 ## Advanced Configuration
+- [Changing Database Connection](advanced-configuration.md#changing-database-connection)
 - [Validations and Callbacks](advanced-configuration.md#validations-and-callbacks)
 - [Custom Search Filters](advanced-configuration.md#custom-search-filters)
 - [Transaction Management](advanced-configuration.md#transaction-management)
