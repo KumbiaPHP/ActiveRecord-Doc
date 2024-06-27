@@ -56,6 +56,9 @@ operaciones.
 `LiteRecord` te permite definir callbacks para ejecutar acciones en momentos específicos del ciclo de vida de un modelo.
 ¿Quieres validar datos antes de guardar o registrar auditorías después de una operación? ¡Puedes hacerlo!
 
+Para obtener una lista detallada de todas los callbacks disponibles, consulte la
+[documentación sobre callbacks](callbacks.md).
+
 ### Ejemplo de validación con un callback
 
 Para validar un producto antes de guardarlo, define un método llamado `_beforeSave`.
@@ -90,6 +93,9 @@ if (!$producto->save()) {
 
 ¿Necesitas implementar búsquedas avanzadas o paginación? `LiteRecord` te tiene cubierto con consultas SQL personalizadas
 para filtrar datos de manera eficiente.
+
+Para obtener una lista detallada de todas las funciones de consulta con LiteRecord, consulte la
+[documentación sobre la función filter](retrieving-data.md#función-filter).
 
 ### Ejemplo de filtro
 

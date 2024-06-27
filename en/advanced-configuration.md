@@ -55,6 +55,8 @@ operations.
 `LiteRecord` allows you to define callbacks to execute actions at specific points in a model's lifecycle. Want to
 validate data before saving or log audits after an operation? You can do that!
 
+For a detailed list of all available callbacks, check out the [callbacks documentation](callbacks.md).
+
 ### Validation Example with a Callback
 
 To validate a product before saving it, define a method called `_beforeSave`.
@@ -89,6 +91,9 @@ if (!$product->save()) {
 
 Need to implement advanced searches or pagination? `LiteRecord` has you covered with custom SQL queries to efficiently
 filter data.
+
+For a detailed list of all query functions with LiteRecord, check out the
+[filter documentation](retrieving-data.md#filter-function).
 
 ### Filter Example
 
