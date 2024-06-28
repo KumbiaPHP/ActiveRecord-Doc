@@ -97,5 +97,5 @@ desnormalizar datos en ciertos casos.
 
 ---
 
-¡Y ahí lo tienes! Con estos consejos y ejemplos, puedes optimizar tus consultas en KumbiaPHP para que sean más rápidas y
+¡Y ahí lo tienes! Con estos consejos y ejemplos, puedes optimizar tus consultas para que sean más rápidas y
 eficientes. ¡Vamos a seguir construyendo cosas asombrosas juntos! 🚀
