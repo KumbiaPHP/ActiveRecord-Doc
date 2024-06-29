@@ -37,3 +37,10 @@
 - [`all` Function](retrieving-data.md#all-function)
 - [`first` Function](retrieving-data.md#first-function)
 - [Using Named Parameters](retrieving-data.md#using-named-parameters)
+
+## Paginated Queries
+- [Introduction](paginated-queries.md#introduction)
+- [`BaseRecord` Class and the `paginateQuery` Function](paginated-queries.md#baserecord-class-and-the-paginatequery-function)
+- [`Paginator` Class](paginated-queries.md#paginator-class)
+- [Practical Example](paginated-queries.md#practical-example)
+- [Conclusion](paginated-queries.md#conclusion)
