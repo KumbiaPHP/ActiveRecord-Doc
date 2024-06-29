@@ -37,3 +37,10 @@
 - [Función `all`](retrieving-data.md#función-all)
 - [Función `first`](retrieving-data.md#función-first)
 - [Uso de Parámetros Nombrados](retrieving-data.md#uso-de-parámetros-nombrados)
+
+## Paginación de resultados
+- [Introducción](paginate-query-results.md#introducción)
+- [Clase `BaseRecord` y la Función `paginateQuery`](paginate-query-results.md#clase-baserecord-y-la-función-paginatequery)
+- [Clase `Paginator`](paginate-query-results.md#clase-paginator)
+- [Ejemplo Práctico](paginate-query-results.md#ejemplo-práctico)
+- [Conclusión](paginate-query-results.md#conclusión)
