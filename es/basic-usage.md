@@ -107,5 +107,43 @@ La eliminación de registros se realiza usando el método `delete()` con la clav
 Producto::delete(1);
 ```
 
+### Guardar (Save)
+
+El método `save()` de LiteRecord permite crear o actualizar un registro dependiendo de si tiene valor en la clave
+primaria o no. Si el objeto tiene una clave primaria establecida, realiza una actualización, de lo contrario, crea un
+nuevo registro.
+
+```php
+// Crear un nuevo producto
+$producto = new Producto();
+$producto->nombre = 'Producto Nuevo';
+$producto->precio = 100.50;
+$producto->save();  // Se realiza un create
+
+// Actualizar un producto existente
+$producto = Producto::get(1);
+$producto->precio = 120.00;
+$producto->save();  // Se realiza un update
+```
+
+También se puede usar directamente el método save con un array de datos.
+
+```php
+// Crear un nuevo producto
+$producto = new Producto();
+$producto->save([    
+    'nombre' => 'Producto Nuevo',
+    'precio' => 100.50
+]); // Se realiza un create
+
+// Actualizar un producto existente
+$producto = new Producto();
+$producto->save([
+    'id' => 1,
+    'nombre' => 'Producto Actualizado',
+    'precio' => 120.00
+]);  // Se realiza un update
+```
+
 LiteRecord ofrece los beneficios de un mini-ORM con la flexibilidad de escribir consultas SQL personalizadas. ¡Es como
 tener lo mejor de ambos mundos, facilitando tu trabajo y maximizando tu productividad! 🚀

@@ -10,6 +10,11 @@
 - [Conceptos fundamentales de ActiveRecord](basic-usage.md#conceptos-fundamentales-de-literecord)
 - [Definición de modelos](basic-usage.md#definición-de-modelos-con-literecord)
 - [Operaciones CRUD básicas](basic-usage.md#operaciones-crud-básicas-con-literecord)
+  - [Crear (Create)](basic-usage.md#crear-create) 
+  - [Leer (Read)](basic-usage.md#leer-read)
+  - [Actualizar (Update)](basic-usage.md#actualizar-update)
+  - [Eliminar (Delete)](basic-usage.md#eliminar-delete)
+  - [Guardar (Save)](basic-usage.md#guardar-save)
 
 ## Configuración Avanzada  
 - [Cambio de Conexión de Base de Datos](advanced-configuration.md#cambio-de-conexión-de-base-de-datos)
