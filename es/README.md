@@ -49,3 +49,7 @@
 - [Clase `Paginator`](paginate-query-results.md#clase-paginator)
 - [Ejemplo Práctico](paginate-query-results.md#ejemplo-práctico)
 - [Conclusión](paginate-query-results.md#conclusión)
+
+## Recursos y referencias
+- [Comunidad y soporte](resources.md#comunidad-y-soporte)
+- [Glosario de términos](resources.md#glosario-de-términos)
